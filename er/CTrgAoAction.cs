@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: er.CTrgAoAction
 // Assembly: Sonic4 ep I, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
@@ -6,86 +6,87 @@
 
 using System.Runtime.InteropServices;
 
-#nullable disable
-namespace er;
-
-public class CTrgAoAction : CTrgBase<CTrgState>
+namespace er
 {
-  private bool[] m_flag = new bool[1];
-  private AppMain.AOS_ACTION m_act;
 
-  public CTrgAoAction() => this.Constructor();
-
-  ~CTrgAoAction() => this.Destructor();
-
-  public void Constructor()
-  {
-  }
-
-  public void Destructor()
-  {
-  }
-
-  public bool Create(AppMain.AOS_ACTION act)
-  {
-    this.Release();
-    this.m_act = act;
-    return this.create();
-  }
-
-  public virtual void Release()
-  {
-    if (!this.m_flag[0])
-      return;
-    this.m_flag[0] = false;
-  }
-
-  public override bool IsValid() => this.m_flag[0];
-
-  protected bool create()
-  {
-    bool flag;
-    if (this.m_act == null)
+    public class CTrgAoAction : CTrgBase<CTrgState>
     {
-      flag = false;
-    }
-    else
-    {
-      flag = true;
-      this.ResetState();
-      this.SetRepeatInterval();
-      this.SetDoubleClickTime();
-      this.SetMoveThreshold();
-      this.m_flag[0] = true;
-    }
-    return flag;
-  }
+      private bool[] m_flag = new bool[1];
+      private AppMain.AOS_ACTION m_act;
 
-  protected override bool hitTest(IntPair pos, uint index)
-  {
-    bool flag = false;
-    if (this.m_flag[0])
-    {
-      uint hitNum = AppMain.AoActGetHitNum(this.m_act);
-      AppMain.AOS_ACT_HIT[] hit_tbl = AppMain.New<AppMain.AOS_ACT_HIT>((int) hitNum);
-      int hitTbl = (int) AppMain.AoActGetHitTbl((AppMain.ArrayPointer<AppMain.AOS_ACT_HIT>) hit_tbl, hitNum, this.m_act);
-      for (int index1 = 0; (long) index1 < (long) hitNum; ++index1)
+      public CTrgAoAction() => this.Constructor();
+
+      ~CTrgAoAction() => this.Destructor();
+
+      public void Constructor()
       {
-        if (AppMain.AoActHitTestCorReverse(hit_tbl[index1], (float) pos.first, (float) pos.second))
+      }
+
+      public void Destructor()
+      {
+      }
+
+      public bool Create(AppMain.AOS_ACTION act)
+      {
+        this.Release();
+        this.m_act = act;
+        return this.create();
+      }
+
+      public virtual void Release()
+      {
+        if (!this.m_flag[0])
+          return;
+        this.m_flag[0] = false;
+      }
+
+      public override bool IsValid() => this.m_flag[0];
+
+      protected bool create()
+      {
+        bool flag;
+        if (this.m_act == null)
+        {
+          flag = false;
+        }
+        else
         {
           flag = true;
-          break;
+          this.ResetState();
+          this.SetRepeatInterval();
+          this.SetDoubleClickTime();
+          this.SetMoveThreshold();
+          this.m_flag[0] = true;
         }
+        return flag;
+      }
+
+      protected override bool hitTest(IntPair pos, uint index)
+      {
+        bool flag = false;
+        if (this.m_flag[0])
+        {
+          uint hitNum = AppMain.AoActGetHitNum(this.m_act);
+          AppMain.AOS_ACT_HIT[] hit_tbl = AppMain.New<AppMain.AOS_ACT_HIT>((int) hitNum);
+          int hitTbl = (int) AppMain.AoActGetHitTbl((AppMain.ArrayPointer<AppMain.AOS_ACT_HIT>) hit_tbl, hitNum, this.m_act);
+          for (int index1 = 0; (long) index1 < (long) hitNum; ++index1)
+          {
+            if (AppMain.AoActHitTestCorReverse(hit_tbl[index1], (float) pos.first, (float) pos.second))
+            {
+              flag = true;
+              break;
+            }
+          }
+        }
+        return flag;
+      }
+
+      [StructLayout(LayoutKind.Sequential, Size = 1)]
+      private new struct BFlag
+      {
+        public const int Setup = 0;
+        public const int Max = 1;
+        public const int None = 2;
       }
     }
-    return flag;
-  }
-
-  [StructLayout(LayoutKind.Sequential, Size = 1)]
-  private new struct BFlag
-  {
-    public const int Setup = 0;
-    public const int Max = 1;
-    public const int None = 2;
-  }
 }

@@ -7,7 +7,6 @@
 using mpp;
 using System;
 
-#nullable disable
 public class GLNormalData(ByteBuffer buffer, int size, uint type, int stride, int elCount) : 
   GLVector3Data(buffer, size, type, stride, elCount),
   OpenGL.GLVertexData

@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework.Media;
 using mpp;
 using System;
 
-#nullable disable
 public class Sonic4Ep1 : Game
 {
   public static Sonic4Ep1 pInstance;

@@ -6,7 +6,6 @@
 
 using mpp;
 
-#nullable disable
 public class GLPositionData(ByteBuffer buffer, int size, uint type, int stride, int elCount) : 
   GLVector3Data(buffer, size, type, stride, elCount),
   OpenGL.GLVertexData

@@ -4,7 +4,6 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-#nullable disable
 public struct QuadType<I, E1, E2, E3>
 {
   private object Value;

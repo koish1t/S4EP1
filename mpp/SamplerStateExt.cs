@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: mpp.SamplerStateExt
 // Assembly: Sonic4 ep I, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
@@ -6,22 +6,23 @@
 
 using Microsoft.Xna.Framework.Graphics;
 
-#nullable disable
-namespace mpp;
-
-internal static class SamplerStateExt
+namespace mpp
 {
-  public static SamplerState clone(this SamplerState original)
-  {
-    return new SamplerState()
+
+    internal static class SamplerStateExt
     {
-      AddressU = original.AddressU,
-      AddressV = original.AddressV,
-      AddressW = original.AddressW,
-      Filter = original.Filter,
-      MaxAnisotropy = original.MaxAnisotropy,
-      MaxMipLevel = original.MaxMipLevel,
-      MipMapLevelOfDetailBias = original.MipMapLevelOfDetailBias
-    };
-  }
+      public static SamplerState clone(this SamplerState original)
+      {
+        return new SamplerState()
+        {
+          AddressU = original.AddressU,
+          AddressV = original.AddressV,
+          AddressW = original.AddressW,
+          Filter = original.Filter,
+          MaxAnisotropy = original.MaxAnisotropy,
+          MaxMipLevel = original.MaxMipLevel,
+          MipMapLevelOfDetailBias = original.MipMapLevelOfDetailBias
+        };
+      }
+    }
 }

@@ -7,7 +7,6 @@
 using Microsoft.Xna.Framework;
 using mpp;
 
-#nullable disable
 public class GLTexCoordData : OpenGL.GLVertexData
 {
   protected readonly Vector2[] data_;

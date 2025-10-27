@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-#nullable disable
 public class LiveFeature : XBOXLive
 {
   private const int screenw = 480;

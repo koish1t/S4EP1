@@ -11,7 +11,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using System;
 
-#nullable disable
 public class Upsell
 {
   private const int SS_MAX = 5;

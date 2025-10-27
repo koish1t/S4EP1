@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: er.web.erWeb
 // Assembly: Sonic4 ep I, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
@@ -6,13 +6,14 @@
 
 using Microsoft.Phone.Tasks;
 
-#nullable disable
-namespace er.web;
-
-public class erWeb
+namespace er.web
 {
-  public static void StartWeb(string url)
-  {
-    new WebBrowserTask() { URL = url }.Show();
-  }
+
+    public class erWeb
+    {
+      public static void StartWeb(string url)
+      {
+        new WebBrowserTask() { URL = url }.Show();
+      }
+    }
 }

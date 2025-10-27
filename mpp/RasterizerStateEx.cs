@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: mpp.RasterizerStateEx
 // Assembly: Sonic4 ep I, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
@@ -6,21 +6,22 @@
 
 using Microsoft.Xna.Framework.Graphics;
 
-#nullable disable
-namespace mpp;
-
-internal static class RasterizerStateEx
+namespace mpp
 {
-  public static RasterizerState clone(this RasterizerState original)
-  {
-    return new RasterizerState()
+
+    internal static class RasterizerStateEx
     {
-      CullMode = original.CullMode,
-      DepthBias = original.DepthBias,
-      FillMode = original.FillMode,
-      MultiSampleAntiAlias = original.MultiSampleAntiAlias,
-      ScissorTestEnable = original.ScissorTestEnable,
-      SlopeScaleDepthBias = original.SlopeScaleDepthBias
-    };
-  }
+      public static RasterizerState clone(this RasterizerState original)
+      {
+        return new RasterizerState()
+        {
+          CullMode = original.CullMode,
+          DepthBias = original.DepthBias,
+          FillMode = original.FillMode,
+          MultiSampleAntiAlias = original.MultiSampleAntiAlias,
+          ScissorTestEnable = original.ScissorTestEnable,
+          SlopeScaleDepthBias = original.SlopeScaleDepthBias
+        };
+      }
+    }
 }

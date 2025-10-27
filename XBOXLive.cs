@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-#nullable disable
 public abstract class XBOXLive
 {
   protected static GamerServicesComponent gameService;

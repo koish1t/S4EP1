@@ -8,7 +8,6 @@ using Microsoft.Xna.Framework;
 using mpp;
 using System;
 
-#nullable disable
 public class GLColorData : OpenGL.GLVertexData
 {
   protected readonly Color[] data_;

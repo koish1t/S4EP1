@@ -6,7 +6,6 @@
 
 using mpp;
 
-#nullable disable
 public struct GLIndexBuffer_ByteBuffer(ByteBuffer data, int dataSize) : OpenGL.GLIndexBuffer
 {
   private ByteBuffer data_ = data;

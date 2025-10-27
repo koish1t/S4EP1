@@ -12,7 +12,6 @@ using System.IO;
 using System.IO.IsolatedStorage;
 using System.Threading;
 
-#nullable disable
 public class SaveState
 {
   public const int SAVE_AFTER_RESPAWN = 0;

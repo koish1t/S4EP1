@@ -8,7 +8,6 @@ using Microsoft.Xna.Framework.Graphics.PackedVector;
 using mpp;
 using System;
 
-#nullable disable
 public class GLBlendIdxData : OpenGL.GLVertexData
 {
   protected readonly Byte4[] data_;

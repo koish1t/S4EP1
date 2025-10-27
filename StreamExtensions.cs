@@ -7,7 +7,6 @@
 using System;
 using System.IO;
 
-#nullable disable
 internal static class StreamExtensions
 {
   private static byte[] buffer = new byte[16384 /*0x4000*/];

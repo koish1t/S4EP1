@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: mpp.DepthStencilStateExt
 // Assembly: Sonic4 ep I, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
@@ -6,31 +6,32 @@
 
 using Microsoft.Xna.Framework.Graphics;
 
-#nullable disable
-namespace mpp;
-
-internal static class DepthStencilStateExt
+namespace mpp
 {
-  public static DepthStencilState clone(this DepthStencilState original)
-  {
-    return new DepthStencilState()
+
+    internal static class DepthStencilStateExt
     {
-      CounterClockwiseStencilDepthBufferFail = original.CounterClockwiseStencilDepthBufferFail,
-      CounterClockwiseStencilFail = original.CounterClockwiseStencilFail,
-      CounterClockwiseStencilFunction = original.CounterClockwiseStencilFunction,
-      CounterClockwiseStencilPass = original.CounterClockwiseStencilPass,
-      DepthBufferEnable = original.DepthBufferEnable,
-      DepthBufferFunction = original.DepthBufferFunction,
-      DepthBufferWriteEnable = original.DepthBufferWriteEnable,
-      ReferenceStencil = original.ReferenceStencil,
-      StencilDepthBufferFail = original.StencilDepthBufferFail,
-      StencilEnable = original.StencilEnable,
-      StencilFail = original.StencilFail,
-      StencilFunction = original.StencilFunction,
-      StencilMask = original.StencilMask,
-      StencilPass = original.StencilPass,
-      StencilWriteMask = original.StencilWriteMask,
-      TwoSidedStencilMode = original.TwoSidedStencilMode
-    };
-  }
+      public static DepthStencilState clone(this DepthStencilState original)
+      {
+        return new DepthStencilState()
+        {
+          CounterClockwiseStencilDepthBufferFail = original.CounterClockwiseStencilDepthBufferFail,
+          CounterClockwiseStencilFail = original.CounterClockwiseStencilFail,
+          CounterClockwiseStencilFunction = original.CounterClockwiseStencilFunction,
+          CounterClockwiseStencilPass = original.CounterClockwiseStencilPass,
+          DepthBufferEnable = original.DepthBufferEnable,
+          DepthBufferFunction = original.DepthBufferFunction,
+          DepthBufferWriteEnable = original.DepthBufferWriteEnable,
+          ReferenceStencil = original.ReferenceStencil,
+          StencilDepthBufferFail = original.StencilDepthBufferFail,
+          StencilEnable = original.StencilEnable,
+          StencilFail = original.StencilFail,
+          StencilFunction = original.StencilFunction,
+          StencilMask = original.StencilMask,
+          StencilPass = original.StencilPass,
+          StencilWriteMask = original.StencilWriteMask,
+          TwoSidedStencilMode = original.TwoSidedStencilMode
+        };
+      }
+    }
 }

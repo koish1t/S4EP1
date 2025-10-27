@@ -7,7 +7,6 @@
 using mpp;
 using System;
 
-#nullable disable
 public class ByteBuffer
 {
   internal byte[] data;

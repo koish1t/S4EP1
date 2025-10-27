@@ -8,7 +8,6 @@ using Microsoft.Xna.Framework;
 using mpp;
 using System;
 
-#nullable disable
 public class GLBlendWeightData : OpenGL.GLVertexData
 {
   protected readonly Vector4[] data_;
