@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <!--Project was exported from assembly: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sonic4 ep I</AssemblyName>
+    <ApplicationVersion>1.2.0.0</ApplicationVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="DoubleType`2.cs" />
+    <Compile Include="Sonic4Ep1.cs" />
+    <Compile Include="XBOXLive.cs" />
+    <Compile Include="ByteBuffer.cs" />
+    <Compile Include="UShortBuffer.cs" />
+    <Compile Include="LiveFeature.cs" />
+    <Compile Include="SaveState.cs" />
+    <Compile Include="Upsell.cs" />
+    <Compile Include="GLIndexBuffer_ByteBuffer.cs" />
+    <Compile Include="StreamExtensions.cs" />
+    <Compile Include="GLVector3Data.cs" />
+    <Compile Include="GLPositionData.cs" />
+    <Compile Include="GLTexCoordData.cs" />
+    <Compile Include="GLColorData.cs" />
+    <Compile Include="GLNormalData.cs" />
+    <Compile Include="GLBlendIdxData.cs" />
+    <Compile Include="GLBlendWeightData.cs" />
+    <Compile Include="IntBuffer.cs" />
+    <Compile Include="UIntBuffer.cs" />
+    <Compile Include="ShortBuffer.cs" />
+    <Compile Include="FloatBuffer.cs" />
+    <Compile Include="TripleType`3.cs" />
+    <Compile Include="QuadType`4.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Sonic4ep1\Strings.cs" />
+    <Compile Include="er\CTrgAoAction.cs" />
+    <Compile Include="er\CTrgBase`1.cs" />
+    <Compile Include="er\CTrgState.cs" />
+    <Compile Include="er\CTrgRect.cs" />
+    <Compile Include="er\CTrgFlick.cs" />
+    <Compile Include="er\IntPair.cs" />
+    <Compile Include="er\CTrgStateEx.cs" />
+    <Compile Include="er\web\erWeb.cs" />
+    <Compile Include="accel\CArray2`1.cs" />
+    <Compile Include="accel\CArray3`1.cs" />
+    <Compile Include="accel\CArray4`1.cs" />
+    <Compile Include="accel\CCircularBuffer`1.cs" />
+    <Compile Include="mpp\OpenGL.cs" />
+    <Compile Include="mpp\MppBitConverter.cs" />
+    <Compile Include="mpp\BlendStateExt.cs" />
+    <Compile Include="mpp\DepthStencilStateExt.cs" />
+    <Compile Include="mpp\SamplerStateExt.cs" />
+    <Compile Include="mpp\RasterizerStateEx.cs" />
+    <Compile Include="gs\backup\GSS_BACKUP.cs" />
+    <Compile Include="gs\backup\SBackup.cs" />
+    <Compile Include="gs\backup\SSystem.cs" />
+    <Compile Include="gs\backup\SStage.cs" />
+    <Compile Include="gs\backup\SSpecial.cs" />
+    <Compile Include="gs\backup\SOption.cs" />
+    <Compile Include="gs\backup\SSpecialSolo.cs" />
+    <Compile Include="gs\backup\SStageSolo.cs" />
+    <Compile Include="gs\backup\EEmeraldStage.cs" />
+    <Compile Include="gs\backup\ESpecialStage.cs" />
+    <Compile Include="setting\file.cs" />
+    <Compile Include="setting\main.cs" />
+    <Compile Include="dbg\CPadEmu.cs" />
+    <Compile Include="GameFramework\GameObjectBase.cs" />
+    <Compile Include="GameFramework\SpriteObject.cs" />
+    <Compile Include="GameFramework\TextObject.cs" />
+    <Compile Include="GameFramework\BenchmarkObject.cs" />
+    <Compile Include="ao\CProc`1.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft\Xna\Framework.RuntimeProfile" />
+    <EmbeddedResource Include="Microsoft\Xna\Framework.XlastConfiguration" />
+    <EmbeddedResource Include="Sonic4ep1\Strings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
