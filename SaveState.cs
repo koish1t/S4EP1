@@ -28,8 +28,8 @@ public class SaveState
   {
     if (AppMain.GsTrialIsTrial())
       return;
-    SaveState.save.player_pos_x = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].obj_work.pos.x;
-    SaveState.save.player_pos_y = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].obj_work.pos.y;
+    SaveState.save.player_pos_x = AppMain.g_gm_main_system.ply_work[0].obj_work.pos.x;
+    SaveState.save.player_pos_y = AppMain.g_gm_main_system.ply_work[0].obj_work.pos.y;
     SaveState.save.resume_pos_x = AppMain.g_gm_main_system.resume_pos_x;
     SaveState.save.resume_pos_y = AppMain.g_gm_main_system.resume_pos_y;
     SaveState.save.game_time = AppMain.g_gm_main_system.game_time;
@@ -42,10 +42,10 @@ public class SaveState
     SaveState.save.level = AppMain.g_gs_main_sys_info.level;
     SaveState.save.game_mode = AppMain.g_gs_main_sys_info.game_mode;
     SaveState.save.boss_load_no = AppMain.g_gm_main_system.boss_load_no;
-    SaveState.save.player_flag = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].player_flag;
-    SaveState.save.ring_num = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].ring_num;
-    SaveState.save.ring_stage_num = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].ring_stage_num;
-    SaveState.save.score = AppMain.g_gm_main_system.ply_work[IntPtr.Zero].score;
+    SaveState.save.player_flag = AppMain.g_gm_main_system.ply_work[0].player_flag;
+    SaveState.save.ring_num = AppMain.g_gm_main_system.ply_work[0].ring_num;
+    SaveState.save.ring_stage_num = AppMain.g_gm_main_system.ply_work[0].ring_stage_num;
+    SaveState.save.score = AppMain.g_gm_main_system.ply_work[0].score;
     if (mode == 1)
     {
       SaveState.save.gm_eve_data = AppMain.gm_eve_data.saveData();

@@ -4,7 +4,6 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.GamerServices;
 using System;
@@ -94,11 +93,6 @@ public abstract class XBOXLive
         }
         Guide.ShowMarketplace(PlayerIndex.One);
       }
-      else
-        new MarketplaceDetailTask()
-        {
-          ContentType = ((MarketplaceContentType) 1)
-        }.Show();
     }
     catch (Exception ex)
     {

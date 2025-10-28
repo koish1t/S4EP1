@@ -57,11 +57,11 @@ namespace er
           this.m_state[index].ResetState();
       }
 
-      public void ResetState(uint index) => this.m_state[(IntPtr) index].ResetState();
+      public void ResetState(uint index) => this.m_state[index].ResetState();
 
       public void AddLock() => this.getState().AddLock();
 
-      public void AddLock(uint index) => this.m_state[(IntPtr) index].ResetState();
+      public void AddLock(uint index) => this.m_state[index].ResetState();
 
       public void DelLock() => this.getState().DelLock();
 
@@ -144,7 +144,7 @@ namespace er
         return this.m_state[0];
       }
 
-      private T getState(uint index) => this.m_state[(IntPtr) index];
+      private T getState(uint index) => this.m_state[index];
 
       [StructLayout(LayoutKind.Sequential, Size = 1)]
       private struct BFlag
