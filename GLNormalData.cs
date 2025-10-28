@@ -7,25 +7,28 @@
 using mpp;
 using System;
 
-public class GLNormalData(ByteBuffer buffer, int size, uint type, int stride, int elCount) : 
-  GLVector3Data(buffer, size, type, stride, elCount),
-  OpenGL.GLVertexData
+public class GLNormalData : GLVector3Data, OpenGL.GLVertexData
 {
-  protected OpenGL.GLVertexElementType[] compType_ = new OpenGL.GLVertexElementType[1]
-  {
-    OpenGL.GLVertexElementType.Normal
-  };
+    protected OpenGL.GLVertexElementType[] compType_ = new OpenGL.GLVertexElementType[1]
+    {
+        OpenGL.GLVertexElementType.Normal
+    };
 
-  public OpenGL.GLVertexElementType[] DataComponents => this.compType_;
+    public GLNormalData(ByteBuffer buffer, int size, uint type, int stride, int elCount)
+        : base(buffer, size, type, stride, elCount)
+    {
+    }
 
-  public virtual void ExtractTo(OpenGL.Vertex[] dst, int count)
-  {
-    for (int index = 0; index < count; ++index)
-      dst[index].Normal = this.data_[index];
-  }
+    public OpenGL.GLVertexElementType[] DataComponents => compType_;
 
-  public void ExtractTo(OpenGL.VertexPosTexColNorm[] dst, int dstOffset, int count)
-  {
-    throw new InvalidOperationException();
-  }
+    public virtual void ExtractTo(OpenGL.Vertex[] dst, int count)
+    {
+        for (int index = 0; index < count; ++index)
+            dst[index].Normal = this.data_[index];
+    }
+
+    public void ExtractTo(OpenGL.VertexPosTexColNorm[] dst, int dstOffset, int count)
+    {
+        throw new InvalidOperationException();
+    }
 }

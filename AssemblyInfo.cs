@@ -6,7 +6,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Sonic 4 Episode I")]
 [assembly: AssemblyDescription("SONIC THE HEDGEHOG 4 Episode I")]
 [assembly: AssemblyTitle("Sonic 4 Episode I")]
-[assembly: Extension]
 [assembly: AssemblyCompany("Sega")]
 [assembly: AssemblyCopyright("Copyright © Sega 2011")]
 [assembly: NeutralResourcesLanguage("en")]

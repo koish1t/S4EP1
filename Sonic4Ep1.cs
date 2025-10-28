@@ -4,7 +4,6 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-using Microsoft.Devices.Sensors;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
@@ -24,7 +23,7 @@ public class Sonic4Ep1 : Game
   private double _lastUpdateMilliseconds;
   public static bool cheat = false;
   public RasterizerState scissorState;
-  private Accelerometer accelerometer;
+  //private Accelerometer accelerometer;
   private AppMain appMain;
   public SpriteBatch spriteBatch;
   protected float deviceMusicVolume;
@@ -45,8 +44,8 @@ public class Sonic4Ep1 : Game
     this.IsMouseVisible = true;
     this.Content.RootDirectory = "Content";
     this.TargetElapsedTime = TimeSpan.FromTicks(333333L);
-    this.Activated += new EventHandler<EventArgs>(((Game) this).OnActivated);
-    this.Deactivated += new EventHandler<EventArgs>(((Game) this).OnDeactivated);
+    //this.Activated += new EventHandler<EventArgs>(((Game) this).OnActivated);
+    //this.Deactivated += new EventHandler<EventArgs>(((Game) this).OnDeactivated);
   }
 
   private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
@@ -78,6 +77,7 @@ public class Sonic4Ep1 : Game
     {
       this.appMain = new AppMain((Game) this, this.graphics, this.GraphicsDevice);
       this.appMain.AppInit("");
+            /*
       if (this.accelerometer == null)
         this.accelerometer = new Accelerometer();
       this.accelerometer.ReadingChanged += new EventHandler<AccelerometerReadingEventArgs>(this.accelerometer_ReadingChanged);
@@ -88,6 +88,7 @@ public class Sonic4Ep1 : Game
       catch (AccelerometerFailedException ex)
       {
       }
+            */
     }
     catch (Exception ex)
     {
@@ -126,12 +127,14 @@ public class Sonic4Ep1 : Game
     AppMain.g_pause_flag = true;
   }
 
+    /*
   private void accelerometer_ReadingChanged(object sender, AccelerometerReadingEventArgs e)
   {
     this.accel.X = (float) e.X;
     this.accel.Y = (float) e.Y;
     this.accel.Z = (float) e.Z;
   }
+    */
 
   protected override void UnloadContent()
   {

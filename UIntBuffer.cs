@@ -4,11 +4,16 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-public class UIntBuffer(ByteBuffer buffer) : ByteBuffer(buffer.data, buffer.offset)
+public class UIntBuffer : ByteBuffer
 {
-  public uint this[int index]
-  {
-    get => this.GetUInt(index * 4);
-    set => this.PutUInt(value, index * 4);
-  }
+    public UIntBuffer(ByteBuffer buffer)
+        : base(buffer.data, buffer.offset)
+    {
+    }
+
+    public uint this[int index]
+    {
+        get => this.GetUInt(index * 4);
+        set => this.PutUInt(value, index * 4);
+    }
 }

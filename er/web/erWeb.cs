@@ -4,7 +4,7 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-using Microsoft.Phone.Tasks;
+using System.Diagnostics;
 
 namespace er.web
 {
@@ -13,7 +13,17 @@ namespace er.web
     {
       public static void StartWeb(string url)
       {
-        new WebBrowserTask() { URL = url }.Show();
+        try
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+        }
       }
     }
 }

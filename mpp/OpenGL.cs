@@ -1143,7 +1143,7 @@ namespace mpp
 
       public static void glBindTexture(uint target, uint texture)
       {
-        OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].BoundTexture = texture;
+        OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].BoundTexture = texture;
       }
 
       public static void glBlendEquation(uint mode)
@@ -1398,7 +1398,7 @@ namespace mpp
           uint num1 = buffer - 1U;
           uint index2 = num1 / 32U /*0x20*/;
           uint num2 = 1U << (int) (num1 & 31U /*0x1F*/);
-          OpenGL.m_usedBufferIDs[(IntPtr) index2] &= ~num2;
+          OpenGL.m_usedBufferIDs[index2] &= ~num2;
         }
       }
 
@@ -1415,7 +1415,7 @@ namespace mpp
           uint num1 = texture - 1U;
           uint index2 = num1 / 32U /*0x20*/;
           uint num2 = 1U << (int) (num1 & 31U /*0x1F*/);
-          OpenGL.m_usedTexIDs[(IntPtr) index2] &= ~num2;
+          OpenGL.m_usedTexIDs[index2] &= ~num2;
         }
       }
 
@@ -1508,7 +1508,7 @@ namespace mpp
             OpenGL.m_colorLogicEnabled = false;
             break;
           case 3553:
-            OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].Enabled = false;
+            OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].Enabled = false;
             break;
           case 16384 /*0x4000*/:
             OpenGL.m_lightUnit[0].Enabled = false;
@@ -1567,7 +1567,7 @@ namespace mpp
             OpenGL.m_colorLogicEnabled = true;
             break;
           case 3553:
-            OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].Enabled = true;
+            OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].Enabled = true;
             break;
           case 16384 /*0x4000*/:
             OpenGL.m_lightUnit[0].Enabled = true;
@@ -1610,7 +1610,7 @@ namespace mpp
             OpenGL.m_colorArrayEnabled = false;
             break;
           case 32888:
-            OpenGL.m_textureUnits[(IntPtr) OpenGL.m_clientActiveTextureUnit].TexCoordArrayEnabled = false;
+            OpenGL.m_textureUnits[OpenGL.m_clientActiveTextureUnit].TexCoordArrayEnabled = false;
             break;
           case 33886:
             OpenGL.m_secondaryColorArrayEnabled = false;
@@ -1640,7 +1640,7 @@ namespace mpp
             OpenGL.m_colorArrayEnabled = true;
             break;
           case 32888:
-            OpenGL.m_textureUnits[(IntPtr) OpenGL.m_clientActiveTextureUnit].TexCoordArrayEnabled = true;
+            OpenGL.m_textureUnits[OpenGL.m_clientActiveTextureUnit].TexCoordArrayEnabled = true;
             break;
           case 33886:
             OpenGL.m_secondaryColorArrayEnabled = true;
@@ -2441,7 +2441,7 @@ namespace mpp
       {
         uint num1 = 0;
         uint index = 0;
-        while (uint.MaxValue == OpenGL.m_usedBufferIDs[(IntPtr) index])
+        while (uint.MaxValue == OpenGL.m_usedBufferIDs[index])
         {
           ++index;
           if ((long) index == (long) OpenGL.m_usedBufferIDs.Length)
@@ -2451,9 +2451,9 @@ namespace mpp
         uint num3 = 0;
         while (num2 != 0U)
         {
-          if (((int) OpenGL.m_usedBufferIDs[(IntPtr) index] & (int) num2) == 0)
+          if (((int) OpenGL.m_usedBufferIDs[index] & (int) num2) == 0)
           {
-            OpenGL.m_usedBufferIDs[(IntPtr) index] |= num2;
+            OpenGL.m_usedBufferIDs[index] |= num2;
             uint key = (uint) ((int) index * 32 /*0x20*/ + (int) num3 + 1);
             num1 = key;
             OpenGL.m_buffers.Add(key, new OpenGL.BufferItem());
@@ -2475,7 +2475,7 @@ namespace mpp
       {
         uint num1 = 0;
         uint index = 0;
-        while (uint.MaxValue == OpenGL.m_usedTexIDs[(IntPtr) index])
+        while (uint.MaxValue == OpenGL.m_usedTexIDs[index])
         {
           ++index;
           if ((long) index == (long) OpenGL.m_usedTexIDs.Length)
@@ -2485,9 +2485,9 @@ namespace mpp
         uint num3 = 0;
         while (num2 != 0U)
         {
-          if (((int) OpenGL.m_usedTexIDs[(IntPtr) index] & (int) num2) == 0)
+          if (((int) OpenGL.m_usedTexIDs[index] & (int) num2) == 0)
           {
-            OpenGL.m_usedTexIDs[(IntPtr) index] |= num2;
+            OpenGL.m_usedTexIDs[index] |= num2;
             uint key = (uint) ((int) index * 32 /*0x20*/ + (int) num3 + 1);
             num1 = key;
             OpenGL.m_textures.Add(key, (Texture2D) null);
@@ -2545,21 +2545,21 @@ namespace mpp
           case 4608:
             break;
           case 4609:
-            OpenGL.m_lightUnit[(IntPtr) light].DiffuseColor.X = param.f0;
-            OpenGL.m_lightUnit[(IntPtr) light].DiffuseColor.Y = param.f1;
-            OpenGL.m_lightUnit[(IntPtr) light].DiffuseColor.Z = param.f2;
+            OpenGL.m_lightUnit[light].DiffuseColor.X = param.f0;
+            OpenGL.m_lightUnit[light].DiffuseColor.Y = param.f1;
+            OpenGL.m_lightUnit[light].DiffuseColor.Z = param.f2;
             break;
           case 4610:
-            OpenGL.m_lightUnit[(IntPtr) light].SpecularColor.X = param.f0;
-            OpenGL.m_lightUnit[(IntPtr) light].SpecularColor.Y = param.f1;
-            OpenGL.m_lightUnit[(IntPtr) light].SpecularColor.Z = param.f2;
+            OpenGL.m_lightUnit[light].SpecularColor.X = param.f0;
+            OpenGL.m_lightUnit[light].SpecularColor.Y = param.f1;
+            OpenGL.m_lightUnit[light].SpecularColor.Z = param.f2;
             break;
           case 4611:
             break;
           case 4612:
-            OpenGL.m_lightUnit[(IntPtr) light].Direction.X = param.f0;
-            OpenGL.m_lightUnit[(IntPtr) light].Direction.Y = param.f1;
-            OpenGL.m_lightUnit[(IntPtr) light].Direction.Z = param.f2;
+            OpenGL.m_lightUnit[light].Direction.X = param.f0;
+            OpenGL.m_lightUnit[light].Direction.Y = param.f1;
+            OpenGL.m_lightUnit[light].Direction.Z = param.f2;
             break;
           default:
             throw new NotImplementedException();
@@ -2585,7 +2585,7 @@ namespace mpp
       {
         if (OpenGL.m_matrixPaletteOESActive)
         {
-          OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES] = Matrix.Identity;
+          OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES] = Matrix.Identity;
         }
         else
         {
@@ -2598,7 +2598,7 @@ namespace mpp
       {
         if (OpenGL.m_matrixPaletteOESActive)
         {
-          OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES] = matrix;
+          OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES] = matrix;
         }
         else
         {
@@ -2683,7 +2683,7 @@ namespace mpp
             OpenGL.m_activeMatrixStack = OpenGL.m_projectionMatrixStack;
             break;
           case 5890:
-            OpenGL.m_activeMatrixStack = OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].MatrixStack;
+            OpenGL.m_activeMatrixStack = OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].MatrixStack;
             break;
           case 6144:
             throw new NotImplementedException();
@@ -2719,7 +2719,7 @@ namespace mpp
       {
         Matrix orthographicOffCenter = Matrix.CreateOrthographicOffCenter(left, right, bottom, top, nearVal, farVal);
         if (OpenGL.m_matrixPaletteOESActive)
-          OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES] = orthographicOffCenter * OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES];
+          OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES] = orthographicOffCenter * OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES];
         else
           OpenGL.m_activeMatrixStack.Push(orthographicOffCenter * OpenGL.m_activeMatrixStack.Pop());
       }
@@ -2748,7 +2748,7 @@ namespace mpp
       {
         Matrix scale = Matrix.CreateScale(x, y, z);
         if (OpenGL.m_matrixPaletteOESActive)
-          OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES] = scale * OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES];
+          OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES] = scale * OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES];
         else
           OpenGL.m_activeMatrixStack.Push(scale * OpenGL.m_activeMatrixStack.Pop());
       }
@@ -2774,7 +2774,7 @@ namespace mpp
         int stride,
         OpenGL.GLVertexData pointer)
       {
-        OpenGL.TextureUnit textureUnit = OpenGL.m_textureUnits[(IntPtr) OpenGL.m_clientActiveTextureUnit];
+        OpenGL.TextureUnit textureUnit = OpenGL.m_textureUnits[OpenGL.m_clientActiveTextureUnit];
         textureUnit.TexCoordArraySize = size;
         textureUnit.TexCoordArrayDataType = type;
         textureUnit.TexCoordArrayStride = stride;
@@ -2821,16 +2821,16 @@ namespace mpp
 
       public static void mppglTexImage2D(Texture2D texture)
       {
-        OpenGL.m_textures[OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].BoundTexture] = texture;
-        OpenGL.m_textures[OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].BoundTexture].Tag = (object) true;
+        OpenGL.m_textures[OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].BoundTexture] = texture;
+        OpenGL.m_textures[OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].BoundTexture].Tag = (object) true;
       }
 
       public static void mppglTexImage2D(string textureName)
       {
         using (Stream stream = TitleContainer.OpenStream(Path.Combine("Content", textureName + ".png")))
         {
-          OpenGL.m_textures[OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].BoundTexture] = Texture2D.FromStream(OpenGL.m_graphicsDevice, stream);
-          OpenGL.m_textures[OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].BoundTexture].Tag = (object) true;
+          OpenGL.m_textures[OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].BoundTexture] = Texture2D.FromStream(OpenGL.m_graphicsDevice, stream);
+          OpenGL.m_textures[OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].BoundTexture].Tag = (object) true;
         }
       }
 
@@ -2838,8 +2838,8 @@ namespace mpp
       {
         if (target != 3553U)
           throw new NotImplementedException();
-        TextureAddressMode AddrU = OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].SamplerState.AddressU;
-        TextureAddressMode AddrV = OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].SamplerState.AddressV;
+        TextureAddressMode AddrU = OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].SamplerState.AddressU;
+        TextureAddressMode AddrV = OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].SamplerState.AddressV;
         switch (pname)
         {
           case 10242:
@@ -2883,19 +2883,19 @@ namespace mpp
         SamplerState samplerState;
         if (!OpenGL.m_samplerStates.TryGetValue(key, out samplerState))
         {
-          samplerState = OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].SamplerState.clone();
+          samplerState = OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].SamplerState.clone();
           samplerState.AddressU = AddrU;
           samplerState.AddressV = AddrV;
           OpenGL.m_samplerStates[key] = samplerState;
         }
-        OpenGL.m_textureUnits[(IntPtr) OpenGL.m_activeTextureUnit].SamplerState = samplerState;
+        OpenGL.m_textureUnits[OpenGL.m_activeTextureUnit].SamplerState = samplerState;
       }
 
       public static void glTranslatef(float x, float y, float z)
       {
         Matrix translation = Matrix.CreateTranslation(x, y, z);
         if (OpenGL.m_matrixPaletteOESActive)
-          OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES] = translation * OpenGL.m_matrixPalleteOES[(IntPtr) OpenGL.m_currentPaletteMatrixOES];
+          OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES] = translation * OpenGL.m_matrixPalleteOES[OpenGL.m_currentPaletteMatrixOES];
         else
           OpenGL.m_activeMatrixStack.Push(translation * OpenGL.m_activeMatrixStack.Pop());
       }
@@ -3032,12 +3032,20 @@ namespace mpp
         return (double) value > (double) upperBound ? upperBound : value;
       }
 
-      public struct glArray4f(float F0, float F1, float F2, float F3)
+      public struct glArray4f
       {
-        public float f0 = F0;
-        public float f1 = F1;
-        public float f2 = F2;
-        public float f3 = F3;
+          public float f0;
+          public float f1;
+          public float f2;
+          public float f3;
+
+          public glArray4f(float F0, float F1, float F2, float F3)
+          {
+              f0 = F0;
+              f1 = F1;
+              f2 = F2;
+              f3 = F3;
+          }
       }
 
       public interface GLVertexData

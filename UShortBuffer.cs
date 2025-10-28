@@ -4,11 +4,16 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
-public class UShortBuffer(ByteBuffer buffer) : ByteBuffer(buffer.data, buffer.offset)
+public class UShortBuffer : ByteBuffer
 {
-  public ushort this[int index]
-  {
-    get => this.GetUShort(index * 2);
-    set => this.PutUShort(value, index * 2);
-  }
+    public UShortBuffer(ByteBuffer buffer)
+        : base(buffer.data, buffer.offset)
+    {
+    }
+
+    public ushort this[int index]
+    {
+        get => this.GetUShort(index * 2);
+        set => this.PutUShort(value, index * 2);
+    }
 }

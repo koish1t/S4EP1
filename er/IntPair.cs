@@ -6,20 +6,26 @@
 
 namespace er
 {
-
-    public struct IntPair(int _first, int _second)
+    public struct IntPair
     {
-      public int first = _first;
-      public int second = _second;
+        public int first;
+        public int second;
 
-      public static IntPair operator -(IntPair lhs, IntPair rhs)
-      {
-        return new IntPair(lhs.first - rhs.first, lhs.second - rhs.second);
-      }
+        public IntPair(int _first, int _second)
+        {
+            first = _first;
+            second = _second;
+        }
 
-      public static IntPair operator +(IntPair lhs, IntPair rhs)
-      {
-        return new IntPair(lhs.first + rhs.first, lhs.second + rhs.second);
-      }
+        public static IntPair operator -(IntPair lhs, IntPair rhs)
+        {
+            return new IntPair(lhs.first - rhs.first, lhs.second - rhs.second);
+        }
+
+        public static IntPair operator +(IntPair lhs, IntPair rhs)
+        {
+            return new IntPair(lhs.first + rhs.first, lhs.second + rhs.second);
+        }
     }
+
 }
