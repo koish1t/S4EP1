@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration" />
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\AppMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\DoubleType`2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\EEmeraldStage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\ESpecialStage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\GSS_BACKUP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SBackup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SSpecial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SSpecialSolo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SStage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SStageSolo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4Ep1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\XBOXLive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\ByteBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\UShortBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\LiveFeature.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\SaveState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Upsell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLIndexBuffer_ByteBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\StreamExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLVector3Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLPositionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLTexCoordData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLColorData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLNormalData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLBlendIdxData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLBlendWeightData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\IntBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\UIntBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\ShortBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\FloatBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\TripleType`3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\QuadType`4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4ep1\Strings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgAoAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgBase`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgRect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgFlick.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\IntPair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgStateEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\web\erWeb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\accel\CArray2`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\accel\CArray3`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\accel\CArray4`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\accel\CCircularBuffer`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\OpenGL.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\MppBitConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\BlendStateExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\DepthStencilStateExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\SamplerStateExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\mpp\RasterizerStateEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\setting\file.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\setting\main.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\dbg\CPadEmu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GameFramework\GameObjectBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GameFramework\SpriteObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GameFramework\TextObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GameFramework\BenchmarkObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\ao\CProc`1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Microsoft\Xna\Framework.RuntimeProfile" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Microsoft\Xna\Framework.XlastConfiguration" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4ep1\Strings.resx" />
+  </ItemGroup>
+</Project>

@@ -1,8 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4EP1", "S4EP1.csproj", "{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "S4EP1SharedProj", "S4EP1SharedProj.shproj", "{A46239BC-5497-4C84-B5D9-9E7E5B7E2D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4EP1.Monogame", "S4EP1.Monogame\S4EP1.Monogame.csproj", "{9B7172AF-1606-0EF1-F9B3-58E69F37936C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +12,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BFF5EC8-A3B7-4830-9B8B-4CB45F9517E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4CC19DA-66CD-42D2-9A87-DA21FD59FB43}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		S4EP1.projitems*{9b7172af-1606-0ef1-f9b3-58e69f37936c}*SharedItemsImports = 5
+		S4EP1.projitems*{a46239bc-5497-4c84-b5d9-9e7e5b7e2d6a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
