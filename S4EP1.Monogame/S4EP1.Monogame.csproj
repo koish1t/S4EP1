@@ -9,6 +9,12 @@
     <StartupObject />
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);Monogame</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);Monogame</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Microsoft\**" />
     <EmbeddedResource Remove="Microsoft\**" />

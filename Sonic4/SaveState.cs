@@ -4,7 +4,9 @@
 // MVID: 093CE2FC-33E2-4332-B0FE-1EA1E44D3AE7
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
+#if !Monogame
 using Microsoft.Xna.Framework.GamerServices;
+#endif
 using Sonic4ep1;
 using System;
 using System.Collections.Generic;
@@ -199,9 +201,11 @@ public class SaveState
   {
     try
     {
-      int? nullable = Guide.EndShowMessageBox(r);
+#if !Monogame
+            int? nullable = Guide.EndShowMessageBox(r);
       if ((nullable.GetValueOrDefault() != 0 ? 0 : (nullable.HasValue ? 1 : 0)) == 0 || !SaveState.loadState())
         return;
+#endif
       SaveState.beginResume = true;
     }
     finally
@@ -223,7 +227,9 @@ public class SaveState
     string idResumeCaption = Strings.ID_RESUME_CAPTION;
     string idResumeText = Strings.ID_RESUME_TEXT;
     AppMain.g_ao_sys_global.is_show_ui = true;
-    Guide.BeginShowMessageBox(idResumeCaption, idResumeText, (IEnumerable<string>) buttons, 0, MessageBoxIcon.Warning, new AsyncCallback(SaveState.GetMBResult), (object) null);
+#if !Monogame
+        Guide.BeginShowMessageBox(idResumeCaption, idResumeText, (IEnumerable<string>) buttons, 0, MessageBoxIcon.Warning, new AsyncCallback(SaveState.GetMBResult), (object) null);
+#endif
   }
 
   public struct SaveData

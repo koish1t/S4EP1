@@ -6,6 +6,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "S4EP1SharedProj", "S4EP1Sha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4EP1.Monogame", "S4EP1.Monogame\S4EP1.Monogame.csproj", "{9B7172AF-1606-0EF1-F9B3-58E69F37936C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4EP1.XNA", "S4EP1.XNA\S4EP1.XNA.csproj", "{DCAA3D76-93C0-55E4-AEB0-31BED522920C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,10 @@ Global
 		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B7172AF-1606-0EF1-F9B3-58E69F37936C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAA3D76-93C0-55E4-AEB0-31BED522920C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DCAA3D76-93C0-55E4-AEB0-31BED522920C}.Debug|Any CPU.Build.0 = Debug|x86
+		{DCAA3D76-93C0-55E4-AEB0-31BED522920C}.Release|Any CPU.ActiveCfg = Release|x86
+		{DCAA3D76-93C0-55E4-AEB0-31BED522920C}.Release|Any CPU.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,5 +32,6 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		S4EP1.projitems*{9b7172af-1606-0ef1-f9b3-58e69f37936c}*SharedItemsImports = 5
 		S4EP1.projitems*{a46239bc-5497-4c84-b5d9-9e7e5b7e2d6a}*SharedItemsImports = 13
+		S4EP1.projitems*{dcaa3d76-93c0-55e4-aeb0-31bed522920c}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
