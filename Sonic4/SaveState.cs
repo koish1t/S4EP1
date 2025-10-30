@@ -201,12 +201,14 @@ public class SaveState
   {
     try
     {
-#if !Monogame
+#if Monogame
+        // TODO: MessageBox
+#else
             int? nullable = Guide.EndShowMessageBox(r);
       if ((nullable.GetValueOrDefault() != 0 ? 0 : (nullable.HasValue ? 1 : 0)) == 0 || !SaveState.loadState())
         return;
 #endif
-      SaveState.beginResume = true;
+            SaveState.beginResume = true;
     }
     finally
     {
@@ -227,10 +229,12 @@ public class SaveState
     string idResumeCaption = Strings.ID_RESUME_CAPTION;
     string idResumeText = Strings.ID_RESUME_TEXT;
     AppMain.g_ao_sys_global.is_show_ui = true;
-#if !Monogame
-        Guide.BeginShowMessageBox(idResumeCaption, idResumeText, (IEnumerable<string>) buttons, 0, MessageBoxIcon.Warning, new AsyncCallback(SaveState.GetMBResult), (object) null);
+#if Monogame
+        // TODO: MessageBox
+#else
+        Guide.BeginShowMessageBox(idResumeCaption, idResumeText, (IEnumerable<string>)buttons, 0, MessageBoxIcon.Warning, new AsyncCallback(SaveState.GetMBResult), (object)null);
 #endif
-  }
+    }
 
   public struct SaveData
   {

@@ -15,10 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SStageSolo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\gs\backup\SSystem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4Ep1.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\XBOXLive.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\ByteBuffer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\UShortBuffer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\LiveFeature.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\SaveState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Upsell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\GLIndexBuffer_ByteBuffer.cs" />
@@ -37,7 +35,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\TripleType`3.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\QuadType`4.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4ep1\Strings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgAoAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgBase`1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sonic4\er\CTrgState.cs" />
@@ -69,6 +66,5 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Microsoft\Xna\Framework.RuntimeProfile" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Microsoft\Xna\Framework.XlastConfiguration" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Sonic4\Sonic4ep1\Strings.resx" />
   </ItemGroup>
 </Project>

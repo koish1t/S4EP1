@@ -5,7 +5,9 @@
 // Assembly location: C:\Users\Texture2D\Documents\WP\Sonic4 ep I.dll
 
 using Microsoft.Xna.Framework;
+#if !Monogame
 using Microsoft.Xna.Framework.GamerServices;
+#endif
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
@@ -40,7 +42,7 @@ public class Sonic4Ep1 : Game
     this.graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
     this.graphics.PreparingDeviceSettings += new EventHandler<PreparingDeviceSettingsEventArgs>(this.graphics_PreparingDeviceSettings);
     this.graphics.SynchronizeWithVerticalRetrace = true;
-    this.graphics.IsFullScreen = true;
+    this.graphics.IsFullScreen = false;
     this.IsMouseVisible = true;
     this.Content.RootDirectory = "Content";
     this.TargetElapsedTime = TimeSpan.FromTicks(333333L);
@@ -60,9 +62,9 @@ public class Sonic4Ep1 : Game
       ScissorTestEnable = true,
       CullMode = CullMode.None
     };
-    Guide.IsScreenSaverEnabled = false;
-    LiveFeature.GAME = this;
-    LiveFeature.getInstance();
+#if !Monogame
+        Guide.IsScreenSaverEnabled = false;
+#endif
     base.Initialize();
   }
 
@@ -100,6 +102,9 @@ public class Sonic4Ep1 : Game
     AppMain.isForeground = false;
     if (SaveState.saveLater)
       SaveState._saveFile((object) SaveState.save);
+#if Monogame
+        this.storeSystemVolume = false;
+#else
     if (!Guide.IsVisible)
     {
       this.storeSystemVolume = true;
@@ -115,6 +120,7 @@ public class Sonic4Ep1 : Game
     }
     else
       this.storeSystemVolume = false;
+#endif
   }
 
   protected override void OnActivated(object sender, EventArgs args)
@@ -148,7 +154,7 @@ public class Sonic4Ep1 : Game
       if (Sonic4Ep1.inputDataRead)
       {
         Sonic4Ep1.inputDataRead = false;
-        if (!LiveFeature.getInstance().InputOverride() && !Upsell.inputUpsellScreen())
+        if (!Upsell.inputUpsellScreen())
           AppMain.onTouchEvents();
         AppMain.amIPhoneAccelerate(ref this.accel);
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
@@ -159,9 +165,12 @@ public class Sonic4Ep1 : Game
     {
       base.Update(gameTime);
     }
+    #if Monogame
+    catch (Exception ex)
+    #else
     catch (GameUpdateRequiredException ex)
+    #endif
     {
-      XBOXLive.HandleGameUpdateRequired(ex);
     }
   }
 
@@ -173,7 +182,6 @@ public class Sonic4Ep1 : Game
     this.appMain.AppMainLoop();
     this.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
     this.spriteBatch.End();
-    LiveFeature.getInstance().ShowOverride();
     Upsell.drawUpsellScreen();
     base.Draw(gameTime);
   }

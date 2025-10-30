@@ -7,7 +7,7 @@
 namespace setting
 {
 
-    public class file
+    public class File
     {
       public const string c_global_ama = "G_COM/MENU/G_PAUSE.AMA";
       public const string c_global_amb = "G_COM/MENU/G_PAUSE.AMB";
